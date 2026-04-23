@@ -1,0 +1,12 @@
+{
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  },
+  "dankPomodoroTimer": {
+    "enabled": true
+  },
+  "screenRecorder": {
+    "enabled": true
+  }
+}

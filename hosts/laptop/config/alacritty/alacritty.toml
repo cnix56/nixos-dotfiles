@@ -1,0 +1,9 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/dank-theme.toml"
+]
+[font]
+size = 14.0
+
+[window]
+opacity = 0.5

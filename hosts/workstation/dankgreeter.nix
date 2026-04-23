@@ -1,0 +1,42 @@
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
+{
+
+  services.displayManager.dms-greeter = {
+    enable = true;
+    compositor = {
+      name = "niri"; # Or "hyprland" or "sway"
+      customConfig = ''
+                output "eDP-1" {
+            off
+            mode "2560x1600@60.002"
+            scale 1.5
+            position x=0 y=0
+        }
+
+        output "DP-1" {
+            mode "2560x1440@240.001"
+            scale 1
+            position x=204 y=1311
+        }
+
+        output "DP-2" {
+            mode "2560x1440@165.080"
+            scale 1
+            transform "270"
+            position x=2764 y=663
+     		}
+
+        hotkey-overlay {
+    skip-at-startup
+    }
+	 '';
+    };
+    configHome = "/home/kevin";
+
+  };
+}
