@@ -14,7 +14,7 @@
     #../../modules/nixos/aerothemeplasma.nix
     ../../modules/nixos/spicetify.nix
     #../../modules/nixos/caelestia.nix
-    #../../modules/nixos/vscode.nix
+    ../../modules/nixos/vscode.nix
   ];
 
   # Bootloader.
@@ -24,8 +24,6 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
   #boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v3;
-  boot.initrd.luks.devices."luks-04aba2c5-885f-4ae6-a5ea-80acc78e7e4e".device =
-    "/dev/disk/by-uuid/04aba2c5-885f-4ae6-a5ea-80acc78e7e4e";
 
   networking.hostName = "workstation"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -124,7 +122,6 @@
     nixfmt
     alacritty
     fastfetch
-    vscodium
     cmatrix
     alacritty
     brave
