@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }:
 let
@@ -36,6 +37,12 @@ in
     size = 32;
     gtk.enable = true;
     x11.enable = true;
+  };
+
+
+  xdg.desktopEntries.whatsapp = {
+    name = "WhatsApp";
+    exec = "${lib.getExe pkgs.brave} --app=https://web.whatsapp.com";
   };
 
   programs.git = {

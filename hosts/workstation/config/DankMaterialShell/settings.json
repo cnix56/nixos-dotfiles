@@ -310,7 +310,7 @@
   "muxCustomCommand": "",
   "muxSessionFilter": "",
   "runDmsMatugenTemplates": true,
-  "matugenTemplateGtk": false,
+  "matugenTemplateGtk": true,
   "matugenTemplateNiri": true,
   "matugenTemplateHyprland": true,
   "matugenTemplateMangowc": true,
