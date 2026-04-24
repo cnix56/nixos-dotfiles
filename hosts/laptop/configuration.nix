@@ -17,8 +17,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
   #boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v3;
-  boot.initrd.luks.devices."luks-db0fdca1-1917-48ad-bc80-3b2de1f4480e".device =
-    "/dev/disk/by-uuid/db0fdca1-1917-48ad-bc80-3b2de1f4480e";
+
 
   networking.hostName = "laptop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
