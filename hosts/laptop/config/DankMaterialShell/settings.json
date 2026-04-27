@@ -222,7 +222,7 @@
   "dankLauncherV2IncludeFoldersInAll": false,
   "useAutoLocation": false,
   "weatherEnabled": true,
-  "networkPreference": "auto",
+  "networkPreference": "wifi",
   "iconTheme": "Papirus",
   "cursorSettings": {
     "theme": "System Default",

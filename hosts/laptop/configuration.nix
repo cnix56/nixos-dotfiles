@@ -8,6 +8,9 @@
     ../../modules/nixos/danklinux.nix
     ./dankgreeter.nix
     ../../modules/nixos/yazi.nix
+    ../../modules/nixos/vscode.nix
+    #../../modules/nixos/virtualbox.nix
+
   ];
 
   # Bootloader.
@@ -16,6 +19,18 @@
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  #boot.kernelPackages = pkgs.linuxPackages;
+
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      package = pkgs.qemu_kvm;
+      runAsRoot = true;
+      swtpm.enable = true;
+    };
+  };
+
+
   #boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v3;
 
 
@@ -96,6 +111,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "libvirtd"
     ];
     packages = with pkgs; [
       kdePackages.kate
@@ -118,7 +134,6 @@
     #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     #  wget
     micro
-    vscodium
     nixfmt
     alacritty
     fastfetch
@@ -138,6 +153,7 @@
     prismlauncher
     proton-vpn
     nitch
+    gnome-boxes
 
 
   ];
