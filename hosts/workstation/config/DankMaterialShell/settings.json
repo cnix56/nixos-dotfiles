@@ -446,7 +446,11 @@
   "screenPreferences": {},
   "showOnLastDisplay": {},
   "niriOutputSettings": {},
-  "hyprlandOutputSettings": {},
+  "hyprlandOutputSettings": {
+    "eDP-1": {
+      "disabled": true
+    }
+  },
   "displayProfiles": {},
   "activeDisplayProfile": {},
   "displayProfileAutoSelect": false,

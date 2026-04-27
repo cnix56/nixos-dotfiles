@@ -98,6 +98,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "i2c"
     ];
     packages = with pkgs; [
       kdePackages.kate
@@ -106,6 +107,8 @@
   };
 
 
+
+  hardware.i2c.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;

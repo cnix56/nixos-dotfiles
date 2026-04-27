@@ -30,3 +30,8 @@ window-rule {
     default-window-height { fixed 700; }
     tiled-state true
 }
+
+window-rule {
+    open-on-output "DP-2"
+    open-fullscreen true
+}
