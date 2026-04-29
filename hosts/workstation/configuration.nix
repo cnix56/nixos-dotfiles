@@ -28,6 +28,11 @@
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
 
+  # Session Variables.
+  environment.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qt6ct";
+  };
+
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
   #boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v3;
@@ -172,6 +177,10 @@
     gpu-screen-recorder
     vlc
     signal-desktop
+    adw-gtk3
+    plasma5Packages.qt5ct
+    kdePackages.qt6ct
+    kdePackages.dolphin
   ];
 
   fonts.packages = with pkgs; [

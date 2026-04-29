@@ -47,6 +47,7 @@ in
     exec = "${lib.getExe pkgs.brave} --app=https://web.whatsapp.com";
   };
 
+
   
 
   programs.zsh = {

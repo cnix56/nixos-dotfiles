@@ -68,8 +68,8 @@
   services.xserver.enable = true;
 
   # Enable the ly display manager
-  services.displayManager.ly.enable = true;
-  qt.enable = true;
+  #services.displayManager.ly.enable = true;
+  #qt.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   #services.displayManager.sddm.enable = true;
