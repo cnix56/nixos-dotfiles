@@ -16,6 +16,7 @@
     #../../modules/nixos/caelestia.nix
     ../../modules/nixos/vscode.nix
     ../../modules/nixos/virtualisation.nix
+    ../../modules/nixos/vramfix.nix
   ];
 
   # Bootloader.
