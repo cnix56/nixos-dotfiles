@@ -29,6 +29,7 @@ in
     ../../modules/home-manager/nixcord.nix
     ../../modules/home-manager/gtk.nix
     #../../modules/home-manager/caelestia.nix
+    ../../modules/home-manager/git.nix
   ];
 
   home.pointerCursor = {
@@ -45,29 +46,14 @@ in
     exec = "${lib.getExe pkgs.brave} --app=https://web.whatsapp.com";
   };
 
-  programs.git = {
-    enable = true;
-    lfs.enable = true;
-    settings = {
-      user = {
-        name = "cnix56";
-        email = "268737461+cnix56@users.noreply.github.com";
-      };
-      init.defaultBranch = "main";
-      credential.helper = "${pkgs.git.override { withLibsecret = true; }}/bin/git-credential-libsecret";
-    };
-    extraConfig = {
-      init.defaultBranch = "main";
-      safe.directory = "/home/kevin/nixos-dotfiles";
-    };
-  };
+  
 
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    initExtra = "nitch";
+    initContent = "nitch";
 
     shellAliases = {
       btw = "echo I use nixos, btw";

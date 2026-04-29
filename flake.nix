@@ -10,14 +10,14 @@
     #  url = "github:sodiboo/niri-flake";
     #  inputs.nixpkgs.follows = "nixpkgs";
     #};
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #noctalia = {
+    #  url = "github:noctalia-dev/noctalia-shell";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     nixcord.url = "github:FlameFlag/nixcord";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
-    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    #nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     # Do not override its nixpkgs input, otherwise there can be mismatch between patches and kernel version
 
     niri = {
@@ -37,12 +37,12 @@
 
     yazi.url = "github:sxyazi/yazi";
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    #spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
-    caelestia-shell = {
-      url = "github:caelestia-dots/shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #caelestia-shell = {
+    #  url = "github:caelestia-dots/shell";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     #aerothemeplasma-nix = {
     #  url = "github:nyakase/aerothemeplasma-nix";
@@ -68,9 +68,9 @@
       nixpkgs,
       home-manager,
       nix-flatpak,
-      nix-cachyos-kernel,
+      #nix-cachyos-kernel,
       yazi,
-      spicetify-nix,
+      #spicetify-nix,
 
       ...
     }:
@@ -79,22 +79,22 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          (
-            { pkgs, ... }:
-            {
-              nixpkgs.overlays = [
-                # Use nixpkgs from your environment, nixpkgs.config will apply.
-                # Has small chance of kernel modules not being compatible with kernel version.
-                #nix-cachyos-kernel.overlays.default
+          #(
+          #  { pkgs, ... }:
+          #  {
+          #    nixpkgs.overlays = [
+          #      # Use nixpkgs from your environment, nixpkgs.config will apply.
+          #      # Has small chance of kernel modules not being compatible with kernel version.
+          #      #nix-cachyos-kernel.overlays.default
 
                 # Alternatively, use the exact nixpkgs revison as defined in this repo.
                 # Guarantees you have binary cache, but initializes another nixpkgs instance.
-                nix-cachyos-kernel.overlays.pinned
-
+          #      nix-cachyos-kernel.overlays.pinned
+          #
                 # Only use one of the two overlays!
-              ];
-            }
-          )
+          #    ];
+          #  }
+          #)
 
           ./modules/nixos/yazi.nix
 
@@ -104,7 +104,7 @@
           #  nixpkgs.overlays = [ niri.overlays.niri ];
           #}
 
-          inputs.spicetify-nix.nixosModules.default
+          #inputs.spicetify-nix.nixosModules.default
 
           home-manager.nixosModules.home-manager
           {
@@ -118,7 +118,7 @@
           }
 
           ./hosts/workstation/configuration.nix
-          ./modules/nixos/noctalia.nix
+          #./modules/nixos/noctalia.nix
         ];
       };
       nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
@@ -126,7 +126,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./hosts/laptop/configuration.nix
-          ./modules/nixos/noctalia.nix
+          #./modules/nixos/noctalia.nix
           nix-flatpak.nixosModules.nix-flatpak
           #niri.nixosModules.niri
           #{

@@ -31,7 +31,3 @@ window-rule {
     tiled-state true
 }
 
-window-rule {
-    open-on-output "DP-2"
-    open-fullscreen true
-}

@@ -12,14 +12,19 @@
     ./dankgreeter.nix
     ../../modules/nixos/hyprland.nix
     #../../modules/nixos/aerothemeplasma.nix
-    ../../modules/nixos/spicetify.nix
+    #../../modules/nixos/spicetify.nix
     #../../modules/nixos/caelestia.nix
     ../../modules/nixos/vscode.nix
+    ../../modules/nixos/virtualisation.nix
   ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  # Power.
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -105,8 +110,6 @@
       #  thunderbird
     ];
   };
-
-
 
   hardware.i2c.enable = true;
 

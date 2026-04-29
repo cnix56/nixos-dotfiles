@@ -10,6 +10,7 @@
     ../../modules/nixos/yazi.nix
     ../../modules/nixos/vscode.nix
     #../../modules/nixos/virtualbox.nix
+    ../../modules/virtualisation.nix
 
   ];
 
@@ -21,14 +22,12 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   #boot.kernelPackages = pkgs.linuxPackages;
 
-  virtualisation.libvirtd = {
-    enable = true;
-    qemu = {
-      package = pkgs.qemu_kvm;
-      runAsRoot = true;
-      swtpm.enable = true;
-    };
-  };
+  # Power.
+
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
+
+  
 
 
   #boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v3;
@@ -153,8 +152,6 @@
     prismlauncher
     proton-vpn
     nitch
-    gnome-boxes
-
 
   ];
 
