@@ -17,8 +17,6 @@
     nixcord.url = "github:FlameFlag/nixcord";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
-    #nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
-    # Do not override its nixpkgs input, otherwise there can be mismatch between patches and kernel version
 
     niri = {
       url = "github:niri-wm/niri";
@@ -36,6 +34,8 @@
     };
 
     yazi.url = "github:sxyazi/yazi";
+
+    nvf.url = "github:notashelf/nvf";
 
     #spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
@@ -68,9 +68,9 @@
       nixpkgs,
       home-manager,
       nix-flatpak,
-      #nix-cachyos-kernel,
       yazi,
       #spicetify-nix,
+      nvf,
 
       ...
     }:
@@ -79,24 +79,10 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          #(
-          #  { pkgs, ... }:
-          #  {
-          #    nixpkgs.overlays = [
-          #      # Use nixpkgs from your environment, nixpkgs.config will apply.
-          #      # Has small chance of kernel modules not being compatible with kernel version.
-          #      #nix-cachyos-kernel.overlays.default
-
-                # Alternatively, use the exact nixpkgs revison as defined in this repo.
-                # Guarantees you have binary cache, but initializes another nixpkgs instance.
-          #      nix-cachyos-kernel.overlays.pinned
-          #
-                # Only use one of the two overlays!
-          #    ];
-          #  }
-          #)
+          
 
           ./modules/nixos/yazi.nix
+          nvf.nixosModules.default
 
           nix-flatpak.nixosModules.nix-flatpak
           #niri.nixosModules.niri

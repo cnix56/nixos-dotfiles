@@ -17,6 +17,7 @@
     ../../modules/nixos/vscode.nix
     ../../modules/nixos/virtualisation.nix
     ../../modules/nixos/vramfix.nix
+    ../../modules/nixos/nvf.nix
   ];
 
   # Bootloader.

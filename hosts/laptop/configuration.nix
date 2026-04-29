@@ -11,6 +11,7 @@
     ../../modules/nixos/vscode.nix
     #../../modules/nixos/virtualbox.nix
     ../../modules/virtualisation.nix
+    ../../modules/nvf.nix
 
   ];
 
