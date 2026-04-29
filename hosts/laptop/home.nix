@@ -13,7 +13,7 @@ let
     niri = "niri";
     noctalia = "noctalia";
     DankMaterialShell = "DankMaterialShell";
-
+    kitty = "kitty";
   };
 in
 {
@@ -30,7 +30,7 @@ in
 
   ];
 
-    home.pointerCursor = {
+  home.pointerCursor = {
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
     size = 24;
@@ -38,13 +38,12 @@ in
     x11.enable = true;
   };
 
-
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    initExtra = "nitch";
+    initContent = "nitch";
 
     shellAliases = {
       btw = "echo I use nixos, btw";

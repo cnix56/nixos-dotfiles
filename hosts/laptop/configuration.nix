@@ -10,8 +10,8 @@
     ../../modules/nixos/yazi.nix
     ../../modules/nixos/vscode.nix
     #../../modules/nixos/virtualbox.nix
-    ../../modules/virtualisation.nix
-    ../../modules/nvf.nix
+    ../../modules/nixos/virtualisation.nix
+    ../../modules/nixos/nvf.nix
 
   ];
 
@@ -153,6 +153,7 @@
     prismlauncher
     proton-vpn
     nitch
+    kitty
 
   ];
 

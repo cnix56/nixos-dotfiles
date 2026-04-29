@@ -1,14 +1,15 @@
 {
-  "currentThemeName": "dynamic",
-  "currentThemeCategory": "dynamic",
-  "customThemeFile": "/home/kevin/.config/DankMaterialShell/themes/gruvboxMulti/theme.json",
+  "currentThemeName": "custom",
+  "currentThemeCategory": "registry",
+  "customThemeFile": "/home/kevin/.config/DankMaterialShell/themes/everforest/theme.json",
   "registryThemeVariants": {
     "gruvboxMulti": {
       "dark": {
         "flavor": "classic-hard-dark",
         "accent": "green"
       }
-    }
+    },
+    "everforest": "soft"
   },
   "matugenScheme": "scheme-tonal-spot",
   "matugenContrast": 0,
@@ -21,7 +22,7 @@
   "controlCenterTileColorMode": "primary",
   "buttonColorMode": "primary",
   "cornerRadius": 12,
-  "niriLayoutGapsOverride": 10,
+  "niriLayoutGapsOverride": -1,
   "niriLayoutRadiusOverride": -1,
   "niriLayoutBorderSize": -1,
   "hyprlandLayoutGapsOverride": -1,
@@ -472,18 +473,18 @@
         "battery",
         "controlCenterButton"
       ],
-      "spacing": 4,
+      "spacing": 0,
       "innerPadding": 4,
       "bottomGap": 0,
-      "transparency": 0.85,
+      "transparency": 1,
       "widgetTransparency": 1,
-      "squareCorners": false,
+      "squareCorners": true,
       "noBackground": false,
       "maximizeWidgetIcons": false,
       "maximizeWidgetText": false,
       "removeWidgetPadding": false,
       "widgetPadding": 8,
-      "gothCornersEnabled": false,
+      "gothCornersEnabled": true,
       "gothCornerRadiusOverride": false,
       "gothCornerRadiusValue": 12,
       "borderEnabled": false,

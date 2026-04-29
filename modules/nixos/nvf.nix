@@ -38,10 +38,10 @@
         }
       ];
 
-      vim.filetree.nvimTree = {
-        enable = true;
-      };
-
+                        #      vim.filetree.nvimTree = {
+                        #        enable = true;
+                        #      };
+                        #
       vim.statusline.lualine.enable = true;
       vim.telescope.enable = true;
       vim.autocomplete.nvim-cmp.enable = true;

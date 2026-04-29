@@ -17,7 +17,6 @@
     nixcord.url = "github:FlameFlag/nixcord";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
-
     niri = {
       url = "github:niri-wm/niri";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -79,7 +78,6 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          
 
           ./modules/nixos/yazi.nix
           nvf.nixosModules.default
@@ -114,6 +112,8 @@
           ./hosts/laptop/configuration.nix
           #./modules/nixos/noctalia.nix
           nix-flatpak.nixosModules.nix-flatpak
+          nvf.nixosModules.default
+
           #niri.nixosModules.niri
           #{
           #  nixpkgs.overlays = [ niri.overlays.niri ];
