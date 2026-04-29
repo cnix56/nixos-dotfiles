@@ -15,6 +15,7 @@ let
     noctalia = "noctalia";
     DankMaterialShell = "DankMaterialShell";
     hypr = "hypr";
+    kitty = "kitty";
 
   };
 in
