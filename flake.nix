@@ -17,10 +17,10 @@
     nixcord.url = "github:FlameFlag/nixcord";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
-    niri = {
-      url = "github:niri-wm/niri";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #niri = {
+    #  url = "github:niri-wm/niri";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     dms = {
       url = "github:AvengeMedia/DankMaterialShell";
