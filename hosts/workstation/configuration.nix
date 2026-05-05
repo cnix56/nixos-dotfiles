@@ -18,6 +18,7 @@
     ../../modules/nixos/virtualisation.nix
     ../../modules/nixos/vramfix.nix
     ../../modules/nixos/nvf.nix
+    ../../modules/nixos/dankplugins.nix
   ];
 
   # Bootloader.
@@ -30,7 +31,7 @@
 
   # Session Variables.
   environment.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = "qt6ct";
+    QT_QPA_PLATFORMTHEME = "qt5ct";
   };
 
   # Use latest kernel.
@@ -119,6 +120,7 @@
   };
 
   hardware.i2c.enable = true;
+  services.gvfs.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -182,6 +184,7 @@
     kdePackages.qt6ct
     kdePackages.dolphin
     yt-dlp
+    papers
   ];
 
   fonts.packages = with pkgs; [

@@ -72,7 +72,7 @@
   "selectedGpuIndex": 0,
   "enabledGpuPciIds": [],
   "showSystemTray": true,
-  "systemTrayIconTintMode": "none",
+  "systemTrayIconTintMode": "primary",
   "systemTrayIconTintSaturation": 50,
   "systemTrayIconTintStrength": 135,
   "showClock": true,
@@ -440,22 +440,36 @@
       ],
       "showOnLastDisplay": true,
       "leftWidgets": [
-        "launcherButton",
-        "workspaceSwitcher",
-        "focusedWindow"
-      ],
-      "centerWidgets": [
-        "music",
-        "clock",
-        "weather"
-      ],
-      "rightWidgets": [
         {
-          "id": "systemTray",
+          "id": "launcherButton",
           "enabled": true
         },
         {
-          "id": "screenRecorder",
+          "id": "workspaceSwitcher",
+          "enabled": true
+        },
+        {
+          "id": "focusedWindow",
+          "enabled": true
+        }
+      ],
+      "centerWidgets": [
+        {
+          "id": "music",
+          "enabled": true
+        },
+        {
+          "id": "clock",
+          "enabled": true
+        },
+        {
+          "id": "weather",
+          "enabled": true
+        }
+      ],
+      "rightWidgets": [
+        {
+          "id": "privacyIndicator",
           "enabled": true
         },
         {
@@ -463,15 +477,11 @@
           "enabled": true
         },
         {
+          "id": "systemTray",
+          "enabled": true
+        },
+        {
           "id": "clipboard",
-          "enabled": true
-        },
-        {
-          "id": "cpuUsage",
-          "enabled": true
-        },
-        {
-          "id": "memUsage",
           "enabled": true
         },
         {
@@ -500,7 +510,7 @@
       "widgetPadding": 8,
       "gothCornersEnabled": true,
       "gothCornerRadiusOverride": false,
-      "gothCornerRadiusValue": 27,
+      "gothCornerRadiusValue": 30,
       "borderEnabled": false,
       "borderColor": "surfaceText",
       "borderOpacity": 1,
@@ -509,8 +519,8 @@
       "widgetOutlineColor": "primary",
       "widgetOutlineOpacity": 1,
       "widgetOutlineThickness": 1,
-      "fontScale": 1.1,
-      "iconScale": 1.1,
+      "fontScale": 1.2,
+      "iconScale": 1.2,
       "autoHide": false,
       "autoHideDelay": 250,
       "showOnWindowsOpen": false,
@@ -606,7 +616,14 @@
     }
   },
   "clipboardEnterToPaste": false,
-  "launcherPluginVisibility": {},
+  "launcherPluginVisibility": {
+    "screenRecorder": {
+      "allowWithoutTrigger": true
+    },
+    "calculator": {
+      "allowWithoutTrigger": true
+    }
+  },
   "launcherPluginOrder": [],
   "configVersion": 5
 }
