@@ -181,6 +181,7 @@
     plasma5Packages.qt5ct
     kdePackages.qt6ct
     kdePackages.dolphin
+    yt-dlp
   ];
 
   fonts.packages = with pkgs; [

@@ -10,8 +10,8 @@
     enable = true;
     settings = {
       vim.theme.enable = true;
-      vim.theme.name = "everforest";
-      vim.theme.style = "hard";
+      vim.theme.name = "catppuccin";
+      vim.theme.style = "mocha";
 
       vim.languages = {
 
