@@ -9,7 +9,7 @@ let
   dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/hosts/workstation/config";
   create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
   configs = {
-    fastfetch = "fastfetch";
+    fastfetch = "fastfetch"; # <nombre que crea en .config> = "de donde lo saca"
     alacritty = "alacritty";
     niri = "niri";
     noctalia = "noctalia";

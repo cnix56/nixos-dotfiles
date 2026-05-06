@@ -14,9 +14,9 @@ imports = [ inputs.nixcord.homeModules.nixcord ];
         vesktop.enable = true;
 	
 	#Theming
-	quickCss = "@import url(https://codeberg.org/ridge/Discord-Adblock/raw/branch/main/discord-adblock.css);";
+	#quickCss = "@import url(https://codeberg.org/ridge/Discord-Adblock/raw/branch/main/discord-adblock.css);";
         config = {
-     	 useQuickCss = true;
+  #   	 useQuickCss = true;
 
 	
 	#enabledThemes = [
@@ -24,29 +24,29 @@ imports = [ inputs.nixcord.homeModules.nixcord ];
 	#];
  
 	plugins = {
-	 anonymiseFileNames.enable = true;
-	 betterGifPicker.enable = true;
-	 betterSessions.enable = true;
-	 BlurNSFW.enable = true;
-	 biggerStreamPreview.enable = true;
-	 callTimer.enable = true;
-         dearrow.enable = true;
-	 fakeNitro.enable = true;
-	 imageZoom.enable = true;
-	 memberCount.enable = true;
-	 mentionAvatars.enable = true;
-	 messageLogger = {
-		enable = true;
-		ignoreSelf = true;
-	 };
-	 serverInfo.enable = true;
-	 typingIndicator.enable = true;
-	 viewIcons.enable = true;
-	 whoReacted.enable = true;
-	 youtubeAdblock.enable = true;
- 	 crashHandler.enable = true;
-	 webKeybinds.enable = true;
-	 webScreenShareFixes.enable = true;
+	 #anonymiseFileNames.enable = true;
+	 #betterGifPicker.enable = true;
+	 #betterSessions.enable = true;
+	 #BlurNSFW.enable = true;
+	 #biggerStreamPreview.enable = true;
+	 #callTimer.enable = true;
+   #dearrow.enable = true;
+	 #fakeNitro.enable = true;
+	 #imageZoom.enable = true;
+	 #memberCount.enable = true;
+	 #mentionAvatars.enable = true;
+	 #messageLogger = {
+	#	enable = true;
+	#	ignoreSelf = true;
+	# };
+	# serverInfo.enable = true;
+	# typingIndicator.enable = true;
+	# viewIcons.enable = true;
+	# whoReacted.enable = true;
+	# youtubeAdblock.enable = true;
+ 	# crashHandler.enable = true;
+	# webKeybinds.enable = true;
+	# webScreenShareFixes.enable = true;
 	
     };
   };        

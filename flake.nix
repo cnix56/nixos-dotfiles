@@ -10,10 +10,10 @@
     #  url = "github:sodiboo/niri-flake";
     #  inputs.nixpkgs.follows = "nixpkgs";
     #};
-    #noctalia = {
-    #  url = "github:noctalia-dev/noctalia-shell";
-    #  inputs.nixpkgs.follows = "nixpkgs";
-    #};
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     nixcord.url = "github:FlameFlag/nixcord";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
