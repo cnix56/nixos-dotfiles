@@ -7,6 +7,7 @@
     nvidiaSettings = true;
     #modesetting.enable = true;
     powerManagement.enable = true;
+    powerManagement.kernelSuspendNotifier = true;
     videoAcceleration = true;
     #powerManagement.finegrained = true;
   };

@@ -16,7 +16,7 @@
     #../../modules/nixos/caelestia.nix
     ../../modules/nixos/vscode.nix
     ../../modules/nixos/virtualisation.nix
-    ../../modules/nixos/vramfix.nix
+    #../../modules/nixos/vramfix.nix
     ../../modules/nixos/nvf.nix
     ../../modules/nixos/dankplugins.nix
   ];
@@ -35,8 +35,11 @@
   };
 
   # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-  #boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-x86_64-v3;
+  #boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = pkgs.linuxPackages;
+  boot.kernelParams = [ "nvidia.NVreg_TemporaryFilePath=/var/tmp" ];
+
+  #boot.blacklistedKernelModules = [ "spd5118" ];
 
   networking.hostName = "workstation"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -185,6 +188,10 @@
     kdePackages.dolphin
     yt-dlp
     papers
+    gradia
+    wf-recorder
+    yazi
+
   ];
 
   fonts.packages = with pkgs; [

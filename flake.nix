@@ -10,10 +10,10 @@
     #  url = "github:sodiboo/niri-flake";
     #  inputs.nixpkgs.follows = "nixpkgs";
     #};
-    noctalia = {
-      url = "github:noctalia-dev/noctalia-shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #noctalia = {
+    #  url = "github:noctalia-dev/noctalia-shell";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
     nixcord.url = "github:FlameFlag/nixcord";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
@@ -22,22 +22,22 @@
     #  inputs.nixpkgs.follows = "nixpkgs";
     #};
 
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell/stable";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #dms = {
+    #  url = "github:AvengeMedia/DankMaterialShell/stable";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
     dms-plugin-registry = {
       url = "github:AvengeMedia/dms-plugin-registry";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    quickshell = {
-      url = "github:quickshell-mirror/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    #quickshell = {
+    #  url = "github:quickshell-mirror/quickshell";
+    #  inputs.nixpkgs.follows = "nixpkgs";
+    #};
 
-    yazi.url = "github:sxyazi/yazi";
+    #yazi.url = "github:sxyazi/yazi";
 
     nvf.url = "github:notashelf/nvf";
 
@@ -72,7 +72,7 @@
       nixpkgs,
       home-manager,
       nix-flatpak,
-      yazi,
+      #yazi,
       #spicetify-nix,
       nvf,
 
@@ -84,7 +84,7 @@
         specialArgs = { inherit inputs; };
         modules = [
 
-          ./modules/nixos/yazi.nix
+          #./modules/nixos/yazi.nix
           nvf.nixosModules.default
 
           nix-flatpak.nixosModules.nix-flatpak

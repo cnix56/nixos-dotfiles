@@ -15,8 +15,8 @@
 
   programs.dms-shell = {
     enable = true;
-    package = inputs.dms.packages.x86_64-linux.dms-shell;
-    quickshell.package = inputs.quickshell.packages.x86_64-linux.quickshell;
+    #package = inputs.dms.packages.x86_64-linux.dms-shell;
+    #quickshell.package = inputs.quickshell.packages.x86_64-linux.quickshell;
 
     systemd = {
       enable = true; # Systemd service for auto-start

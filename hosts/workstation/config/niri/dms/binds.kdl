@@ -133,4 +133,7 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+Y { show-hotkey-overlay; }
     Mod+Tab repeat=false { toggle-overview; }
+    Alt+S { spawn "sh" "-c" "wf-recorder -g \"$(slurp)\" -f \"$HOME/Videos/Recordings/$(date +'%F_%H-%M-%S').mp4\""; }
+    Alt+D { spawn "pkill" "-INT" "wf-recorder"; }
+
 }

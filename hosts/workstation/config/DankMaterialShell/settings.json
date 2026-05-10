@@ -139,11 +139,11 @@
       "width": 50
     }
   ],
-  "showWorkspaceIndex": true,
+  "showWorkspaceIndex": false,
   "showWorkspaceName": false,
   "showWorkspacePadding": false,
   "workspaceScrolling": false,
-  "showWorkspaceApps": false,
+  "showWorkspaceApps": true,
   "workspaceDragReorder": true,
   "maxWorkspaceIcons": 3,
   "workspaceAppIconSizeOffset": 0,
@@ -491,6 +491,11 @@
         {
           "id": "battery",
           "enabled": true
+        },
+        {
+          "id": "cpuUsage",
+          "enabled": true,
+          "minimumWidth": true
         },
         {
           "id": "controlCenterButton",
